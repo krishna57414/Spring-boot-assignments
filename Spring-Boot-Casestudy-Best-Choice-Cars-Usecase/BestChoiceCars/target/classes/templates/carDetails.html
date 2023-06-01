@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Details</title>
+</head>
+<body>
+    <h1>Car Details</h1>
+    <!-- Display car details dynamically from the server-side -->
+    <h2>Brand: {{car.brand}}</h2>
+    <h3>Model: {{car.model}}</h3>
+    <p>Model Year: {{car.modelYear}}</p>
+    <p>Kilometers: {{car.kms}}</p>
+    <p>Price: {{car.price}}</p>
+    <p>Fuel: {{car.fuel}}</p>
+    <br>
+    <form action="/cars/book" method="POST">
+        <!-- Add form fields for booking the car -->
+        <button type="submit">Book Car</button>
+    </form>
+    <a href="/cars/searchByBrand">Back to Search by Brand</a>
+</body>
+</html>
