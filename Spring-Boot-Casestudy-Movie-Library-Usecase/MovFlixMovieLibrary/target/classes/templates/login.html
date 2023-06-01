@@ -1,0 +1,41 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Admin Details Form</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/stylebac.css">
+</head>
+<body>
+<h1>Search : </h1>
+<div class="usersearch">
+<form th:action="@{/admin/login}" method="post">
+	<h1>Admin Login Page</h1>
+    <label>User ID:</label>
+    <input type="text" placeholder="Enter User ID" name="userId" required/><br/>
+    <label>Password:</label>
+    <input type="password" placeholder="Enter Password" name="password" required/><br/>
+    <input type="submit" value="Login"/>
+    <p th:text="${error}"></p>
+    
+</form>
+</div>
+<form action="/getemployee">
+	<label>Search By Movie Id </label>
+<input type="text" placeholder="Enter Movie Id" name="id" required/><br/>
+    <input type="submit" >
+    </form>
+<form action="/byname">
+	<label>Search By Movie Name</label>
+<input type="text" placeholder="Enter Movie Name" name="name" required/><br/>
+    <input type="submit" >
+    </form>
+    <form action="/bycollection">
+	<label>Search By Movie Collection</label>
+<input type="text"placeholder="Enter Movie Collection" name="collection" required/><br/>
+    <input type="submit" >
+    </form>
+    
+</body>
+</html>
+

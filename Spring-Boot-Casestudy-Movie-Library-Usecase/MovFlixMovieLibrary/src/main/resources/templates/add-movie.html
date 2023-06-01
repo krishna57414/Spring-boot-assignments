@@ -1,0 +1,21 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Admin Details Form</title>
+</head>
+<body bgcolor="lightgreen">
+<!-- add-movie.html -->
+<form th:action="@{/admin/add-movie}" method="post">
+    <label>Enter movie Id:</label>
+    <input type="text" placeholder="Enter Movie Id" name="id" required/><br/>
+    <label> Enter Movie Name:</label>
+    <input type="text" placeholder="Enter Movie Name" name="name" required/><br/>
+    <label> Enter Movie Collection:</label>
+    <input type="text" placeholder="Enter Movie Collection" name="collection" required/><br/>
+    <input type="submit" style="color:blue" value="Add Movie"/>
+</form>
+
+</body>
+</html>
+

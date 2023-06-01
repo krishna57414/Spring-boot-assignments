@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+</head>
+<style>
+table{
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+}
+td, th{
+	 border : 1px solid gray;
+	 text-align : left;
+	 padding : 8px;
+	 
+	 }
+</style>
+<body bgcolor="lightgreen">
+    <h1>Movie Details</h1>
+    <table >
+        <thead>
+            <tr>
+                <th> ID    </th>
+                <th> Movie Name  </th>
+                <th>collection</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+        <td th:text="${employee.id}"></td>
+        <td th:text="${employee.name}"></td>
+        <td th:text="${employee.collection}"></td>
+        
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Details</title>
+</head>
+<style>
+table{
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+}
+td, th{
+	 border : 1px solid gray;
+	 text-align : left;
+	 padding : 8px;
+	 
+	 }
+</style>
+<body bgcolor="lightgreen">
+    <h1>Movie Details</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Movie ID</th>
+                <th>Movie Name</th>
+                <th>Collection</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="movie : ${matchingMovies}">
+                <tr>
+                    <td th:text="${movie.id}"></td>
+                    <td th:text="${movie.name}"></td>
+                    <td th:text="${movie.collection}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+</body>
+</html>
